@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:gravity="right"
+    >
+
+    <TextView
+        android:id="@+id/first_name"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@+id/date_out"
+        android:textSize="25dp"
+        android:textColor="#ffffff"
+
+        />
+    <TextView
+        android:id="@+id/last_name"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@+id/first_name"
+        android:layout_marginLeft="25dp"
+        android:textSize="25dp"
+        android:textColor="#ffffff"
+        />
+    <TextView
+        android:id="@+id/date_out"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="2015"
+        android:textSize="25dp"
+        android:textColor="#ff0000"
+        />
+
+</RelativeLayout>

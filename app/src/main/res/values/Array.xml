@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tab_titles">
+        <item>Tous Les Agents</item>
+        <item>Les Agents en Congé</item>
+    </string-array>
+
+    <string-array name="tab_descriptions">
+        <item>Tous Les Agents</item>
+        <item>Les Agents en Congé</item>
+    </string-array>
+
+</resources>
