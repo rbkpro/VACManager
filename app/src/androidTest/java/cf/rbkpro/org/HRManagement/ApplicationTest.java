@@ -1,4 +1,4 @@
-package cf.rbkpro.org.swipeexample;
+package cf.rbkpro.org.HRManagement;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

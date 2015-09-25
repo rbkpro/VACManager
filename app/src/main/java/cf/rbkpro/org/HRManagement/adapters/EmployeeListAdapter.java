@@ -1,16 +1,15 @@
-package cf.rbkpro.org.swipeexample.adapters;
+package cf.rbkpro.org.HRManagement.adapters;
 
 
 import android.graphics.Color;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import cf.rbkpro.org.swipeexample.R;
-import cf.rbkpro.org.swipeexample.model.Employee;
+import cf.rbkpro.org.HRManagement.R;
+import cf.rbkpro.org.HRManagement.model.Employee;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -63,13 +62,13 @@ public class EmployeeListAdapter extends BaseAdapter {
         String firstName;
         String lastName;
         Date dateOut;
-        firstName= employeeList.get(position).getFirstName();
-        lastName=employeeList.get(position).getLastName();
-        dateOut= employeeList.get(position).getVacationDate();
+        firstName= employeeList.get(position).getFirst_name();
+        lastName=employeeList.get(position).getLast_name();
+        dateOut= employeeList.get(position).getDate_of_birth();
         holder.firstName.setText(firstName);
         holder.lastName.setText(lastName);
         holder.dateOut.setText("" + new SimpleDateFormat("yyyy/MM/dd").format(dateOut));
-
+        //Employees who their vacation end or they on vacation or they don't take vacation yet
         if(dateOut.before(new Date())){
             Calendar c=new GregorianCalendar();
             c.setTime(dateOut);
@@ -85,7 +84,10 @@ public class EmployeeListAdapter extends BaseAdapter {
         return convertView;
     }
 
-
+    public void updateData(ArrayList<Employee> empsList){
+        employeeList=empsList;
+        notifyDataSetChanged();
+    }
 
 
     private static class ViewHolder {
